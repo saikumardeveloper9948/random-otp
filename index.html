@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP GENERATION</title>
+    <style>
+      .body {
+        background-color: cornflowerblue;
+      }
+      .submit {
+        background-color: aqua;
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="submit" >hi</div> -->
+
+    <h1></h1>
+    <button
+      id="button"
+      onclick="otp()"
+      ondblclick="color()"
+      onmouseover="btnclr()"
+    >
+      click me!
+    </button>
+    <!-- <button id="btn1" ondblclick="color()">color</button> -->
+    <h3></h3>
+
+    <script>
+      function otp() {
+        let a = Math.floor(Math.random() * (9999 - 1000) + 1000);
+        let head1 = document.getElementsByTagName("h1");
+        let x = Math.floor(Math.random() * (900000 - 100000) + 100000);
+        head1[0].style.color=`#${x}`;
+        head1[0].innerHTML = a;
+      }
+
+      function color() {
+        
+        let x = Math.floor(Math.random() * (900000 - 100000) + 100000);
+        document.body.style.backgroundColor = `#${x}`;
+        // let el=document.createElementById("btn1");
+
+        // let otp = document.getElementsByTagName("h3");
+        // otp[0].innerHTML = "Click for OTP !";
+        // otp[0].style.color = `#${x}`;
+      }
+      function btnclr() {
+        let clr = Math.random() * (900000 - 100000) + 100000;
+        let btn = (document.getElementById(
+          "button"
+        ).style.backgroundColor = `#${Math.floor(clr)}`);
+        btn.style.color = `#${Math.floor(clr * 15)}`;
+      }
+    </script>
+  </body>
+</html>
